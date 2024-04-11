@@ -3,6 +3,7 @@
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
+$subject = $_POST['subject'];
 
 // データベース接続情報
 $servername = "localhost"; // データベースのホスト名
@@ -17,11 +18,12 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // SQLクエリを準備し、データを挿入する
-    $sql = "INSERT INTO comments (name, email, message) VALUES (:name, :email, :message)";
+    $sql = "INSERT INTO comments (name, email, message, subject) VALUES (:name, :email, :message, :subject)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':message', $message);
+    $stmt->bindParam(':subject', $subject);
     $stmt->execute();
 
     // コメントが正常に挿入された場合にJavaScriptで確認ダイアログを表示
