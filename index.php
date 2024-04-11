@@ -36,9 +36,18 @@
     <textarea id="message" name="message" required></textarea><br>
 
     <label for="subject">どちらへのお問い合わせですか？:</label><br>
-    <select id="subject" name="subject">
-      <option value="1">錦さん</option>
-      <option value="2">小山さん</option>
+<select id="subject" name="subject">
+   <option value="1">錦さん</option>
+   <option value="2">小山明さん</option>
+  <option value="3">西口さん</option>
+   <option value="4">西崎さん</option>
+   <option value="5">和田さん</option>
+   <option value="6">平山さん</option>
+  <option value="7">村山さん</option>
+   <option value="8">小山ゆさん</option>
+  <option value="9">亀ケ澤さん</option>
+   <option value="10">梅田さん</option>
+   <option value="11">向平さん</option>
     </select><br>
 
     <input type="submit" value="送信">
@@ -72,12 +81,30 @@ try {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
   
       // Set subject based on sender
-      if ($row["subject"] === 1) {
-        $subject = "錦さんへ";
-      } elseif ($row["subject"] === 2) {
-        $subject = "小山さんへ";
-      }
-  
+if ($row["subject"] === 1) {
+  $subject = "錦さんへ";
+} elseif ($row["subject"] === 2) {
+  $subject = "小山明さんへ";
+} elseif ($row["subject"] === 3) {
+  $subject = "西口さんへ";
+} elseif ($row["subject"] === 4) {
+  $subject = "西崎さん";
+} elseif ($row["subject"] === 5) {
+  $subject = "和田さん";
+} elseif ($row["subject"] === 6) {
+  $subject = "平山さんへ";
+} elseif ($row["subject"] === 7) {
+  $subject = "村山さんへ";
+} elseif ($row["subject"] === 8) {
+  $subject = "小山ゆさん";
+} elseif ($row["subject"] === 9) {
+  $subject = "亀ケ澤さん";
+} elseif ($row["subject"] === 10) {
+  $subject = "梅田さん";
+} elseif ($row["subject"] === 11) {
+  $subject = "向平さん";
+}
+    
       echo "<p><strong>件名:</strong> " . $subject . "<br>";
       echo "<strong>名前:</strong> " . $row["name"] . "<br>";
       echo "<strong>メールアドレス:</strong> " . $row["email"] . "<br>";
