@@ -30,8 +30,9 @@ CREATE TABLE `comments` (
   `email` varchar(255) NOT NULL,
   `message` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `subject` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +41,7 @@ CREATE TABLE `comments` (
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
-INSERT INTO `comments` VALUES (1,'ねこ','1111@mail.com','neko','2024-04-11 02:31:04'),(2,'ｒ','1111@gmail.com','r','2024-04-11 02:36:34'),(3,'taro','1111@gmail.com','a','2024-04-11 02:38:10'),(4,'taro','1111@gmail.com','a','2024-04-11 02:38:28'),(5,'1','1111@gmail.com','あ','2024-04-11 02:38:47');
+INSERT INTO `comments` VALUES (1,'ねこ','1111@mail.com','neko','2024-04-11 02:31:04',NULL),(2,'ｒ','1111@gmail.com','r','2024-04-11 02:36:34',NULL),(3,'taro','1111@gmail.com','a','2024-04-11 02:38:10',NULL),(4,'taro','1111@gmail.com','a','2024-04-11 02:38:28',NULL),(5,'1','1111@gmail.com','あ','2024-04-11 02:38:47',NULL),(6,'alk','akemi.l.koyama@gmail.com','test','2024-04-11 04:03:02',NULL),(7,'alk','akemi.l.koyama@gmail.com','a','2024-04-11 04:20:18',NULL);
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,6 +51,11 @@ UNLOCK TABLES;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-04-11 13:33:20
+
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
