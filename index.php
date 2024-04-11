@@ -14,7 +14,7 @@
             <p>一番好きなお笑い芸人はハリウッドザコシショウです。</p>
         </div>
         <div><h2>小山明美</h2><br>
-        <img src="image.png" height="auto" width="250">
+        <img src="hannin.jpg" height="auto" width="250">
         フロリダ州のオレンジ畑のど真ん中で育った日本人です。<br>
         趣味はゲームと読書。好きな運動は水泳。<br>
         全然効果は出てないけど、筋トレが大好きです。<br>
